@@ -36,6 +36,7 @@ type Props = {
 export const Photo = (props: Props) => {
   const classes = useStyles()
   const { image } = props
+
   return (
     <figure className={classes.figure}>
       <img src={image.url} alt={image.caption} className={classes.image} />
