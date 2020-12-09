@@ -1,7 +1,5 @@
-import './App.css'
+import { PhotoGallery } from './PhotoGallery'
 
-function App() {
-  return <div></div>
-}
+export const App = () => <PhotoGallery />
 
 export default App

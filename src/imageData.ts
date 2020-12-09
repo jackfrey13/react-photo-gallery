@@ -1,7 +1,9 @@
-type ImageData = {
+export type ImageData = Image[]
+
+export type Image = {
   url: string
   caption: string
-}[]
+}
 
 export const getImageData = (count: number): ImageData =>
   Array(count)
