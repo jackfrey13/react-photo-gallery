@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
+import Paper from '@material-ui/core/Paper'
 import { Image } from './imageData'
 
 const useStyles = makeStyles({
@@ -9,6 +10,10 @@ const useStyles = makeStyles({
     padding: '10px',
     borderRadius: '10px',
     margin: 'auto'
+  },
+
+  wrapper: {
+    borderRadius: '10px'
   },
 
   image: {
@@ -38,10 +43,12 @@ export const Photo = (props: Props) => {
   const { image } = props
 
   return (
-    <figure className={classes.figure}>
-      <img src={image.url} alt={image.caption} className={classes.image} />
-      <figcaption className={classes.figcaption}>{image.caption}</figcaption>
-    </figure>
+    <Paper elevation={3} className={classes.wrapper}>
+      <figure className={classes.figure}>
+        <img src={image.url} alt={image.caption} className={classes.image} />
+        <figcaption className={classes.figcaption}>{image.caption}</figcaption>
+      </figure>
+    </Paper>
   )
 }
 
